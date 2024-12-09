@@ -1,0 +1,37 @@
+GET http://localhost:5003
+
+###
+POST http://localhost:5003/auth/register
+Content-Type: application/json
+
+{
+    "username": "rudra@gmail.com",
+    "password": "123123123"
+}
+
+
+###
+
+POST http://localhost:5003/auth/login
+Content-Type: application/json
+
+{
+    "username": "rudra@gmail.com",
+    "password": "123123123"
+}
+
+
+###
+
+GET http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMzNDA4MTQzLCJleHAiOjE3MzM0OTQ1NDN9.yf1D7Zhae6NLBfoY4HD81qEcSp3bWOxU4tkFLMY4vKo
+
+###
+
+POST http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzMzNDA4MTQzLCJleHAiOjE3MzM0OTQ1NDN9.yf1D7Zhae6NLBfoY4HD81qEcSp3bWOxU4tkFLMY4vKo
+Content-Type: application/json
+
+{
+    "task": "finish"
+}
